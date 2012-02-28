@@ -10,6 +10,10 @@
 @synthesize addressLabel;
 @synthesize navigationHeader;
 @synthesize cuisineLabel;
+@synthesize reviewLabel;
+@synthesize phoneLabel;
+@synthesize yearLabel;
+
 
 #pragma mark - View lifecycle
 
@@ -20,6 +24,11 @@
     
     addressLabel.text = [restaurant address];
     navigationHeader.title = [restaurant name];
+    cuisineLabel.text = [restaurant cuisineType];
+    reviewLabel.text = [restaurant review];
+    phoneLabel.text = [restaurant phone];
+    yearLabel.text = [restaurant year];
+    
 }
 
 - (void)viewDidUnload
@@ -27,6 +36,9 @@
     [self setAddressLabel:nil];
     [self setNavigationHeader:nil];
     [self setCuisineLabel:nil];
+    [self setReviewLabel:nil];
+    [self setPhoneLabel:nil];
+    [self setYearLabel:nil];
     [super viewDidUnload];
 }
 
